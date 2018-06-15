@@ -33,7 +33,7 @@
     </bean>
 
     <!-- 组件扫描 -->
-    <context:component-scan base-package="com.zkh.controller"></context:component-scan>
+    <context:component-scan base-package="com.nfc.controller"></context:component-scan>
 
     <!-- 校验器 -->
     <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
@@ -56,7 +56,7 @@
     </bean>
 
     <!-- 全局异常处理器 -->
-    <bean class="com.zkh.exception.CustomExceptionResolver"></bean>
+    <bean class="com.nfc.exception.CustomExceptionResolver"></bean>
 
     <!-- 文件上传 -->
     <bean id="multipartResolver"

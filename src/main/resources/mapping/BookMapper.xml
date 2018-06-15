@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.zkh.dao.BookMapper" >
-  <resultMap id="BaseResultMap" type="com.zkh.pojo.Book" >
+<mapper namespace="com.nfc.dao.BookMapper" >
+  <resultMap id="BaseResultMap" type="com.nfc.pojo.Book" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="market_price" property="marketPrice" jdbcType="VARCHAR" />
@@ -39,7 +39,7 @@
   <sql id="Base_Column_List" >
     id, title, market_price, author
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.zkh.pojo.BookExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.nfc.pojo.BookExample" >
     select
     <if test="distinct" >
       distinct
@@ -64,13 +64,13 @@
     delete from book
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.zkh.pojo.Book" >
+  <insert id="insert" parameterType="com.nfc.pojo.Book" >
     insert into book (id, title, market_price, 
       author)
     values (#{id,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{marketPrice,jdbcType=VARCHAR}, 
       #{author,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.zkh.pojo.Book" >
+  <insert id="insertSelective" parameterType="com.nfc.pojo.Book" >
     insert into book
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -101,7 +101,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.zkh.pojo.Book" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.nfc.pojo.Book" >
     update book
     <set >
       <if test="title != null" >
@@ -116,7 +116,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.zkh.pojo.Book" >
+  <update id="updateByPrimaryKey" parameterType="com.nfc.pojo.Book" >
     update book
     set title = #{title,jdbcType=VARCHAR},
       market_price = #{marketPrice,jdbcType=VARCHAR},

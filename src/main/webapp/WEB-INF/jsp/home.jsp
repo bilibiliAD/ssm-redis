@@ -8,20 +8,17 @@
 
     <div region="center">
         <div class="easyui-tabs" fit="true" border="false" id="tabs">
-            <div title="首页" data-options="iconCls:'icon-home'">
-                <div align="center" style="padding-top: 20px;"><a href="https://github.com/bilibiliAD/ssm-demo"
+                <div align="center" style="padding-top: 20px;"><a href="https://github.com/bilibiliAD/ssm-redis"
                                                                   target="_blank"
                                                                   style="font-size: 20px;">Gitub仓库地址</a></div>
                 <div align="center" style="padding-top: 50px">
                     <font color="grey" size="10">ssm整合Redis demo</font>
                 </div>
             </div>
-        </div>
     </div>
 
 
-    <%@ include file="./modules/page-toolkit.jsp" %>
-    <hr> &copy;2018 - NFC
+     <hr> &copy;2018 - NFC
 </div>
 <%@ include file="./modules/javascript.jsp" %>
 <%@ include file="./modules/web-footer.jsp" %>

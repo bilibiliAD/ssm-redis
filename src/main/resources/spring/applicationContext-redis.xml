@@ -43,7 +43,7 @@
         </property>
     </bean>
     <!-- cache配置 -->
-    <bean id="methodCacheInterceptor" class="com.zkh.interceptor.MethodCacheInterceptor">
+    <bean id="methodCacheInterceptor" class="com.nfc.interceptor.MethodCacheInterceptor">
         <property name="redisUtil" ref="redisUtil"/>
         <property name="defaultCacheExpireTime" value="${redis.cacheExpireTime}"/>
         <property name="targetNamesList">
@@ -57,13 +57,13 @@
             </list>
         </property>
     </bean>
-    <bean id="redisUtil" class="com.zkh.util.RedisUtil">
+    <bean id="redisUtil" class="com.nfc.util.RedisUtil">
         <property name="redisTemplate" ref="redisTemplate"/>
     </bean>
     <!--配置切面拦截方法 -->
     <aop:config proxy-target-class="true">
         <aop:pointcut id="controllerMethodPointcut" expression="
-        execution(* com.zkh.service.impl.*.select*(..))"/>
+        execution(* com.nfc.service.impl.*.select*(..))"/>
         <aop:advisor advice-ref="methodCacheInterceptor" pointcut-ref="controllerMethodPointcut"/>
     </aop:config>
 

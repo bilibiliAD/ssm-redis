@@ -18,18 +18,18 @@
                         userId="root"
                         password="newpass"/>
 
-        <javaModelGenerator targetPackage="com.zkh.pojo"
+        <javaModelGenerator targetPackage="com.nfc.pojo"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="com.zkh.pojo.xml"
+        <sqlMapGenerator targetPackage="com.nfc.pojo.xml"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
-        <javaClientGenerator targetPackage="com.zkh.dao"
+        <javaClientGenerator targetPackage="com.nfc.dao"
                              targetProject="src/main/java" type="XMLMAPPER">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>

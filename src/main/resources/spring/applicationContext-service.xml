@@ -16,8 +16,8 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <bean id="movieService" class="com.zkh.service.impl.MovieServiceImpl"></bean>
-    <bean id="bookService" class="com.zkh.service.impl.BookServiceImpl"></bean>
-    <bean id="userService" class="com.zkh.service.impl.UserServiceImpl"></bean>
+    <bean id="movieService" class="com.nfc.service.impl.MovieServiceImpl"></bean>
+    <bean id="bookService" class="com.nfc.service.impl.BookServiceImpl"></bean>
+    <bean id="userService" class="com.nfc.service.impl.UserServiceImpl"></bean>
 
 </beans>

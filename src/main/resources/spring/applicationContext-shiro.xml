@@ -17,7 +17,7 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
     <!-- 配置自定义Realm -->
-    <bean id="loginRealm" class="com.zkh.shiro.LoginRealm"/>
+    <bean id="loginRealm" class="com.nfc.shiro.LoginRealm"/>
     <!-- 安全管理器 -->
     <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
         <property name="realm" ref="loginRealm"/>

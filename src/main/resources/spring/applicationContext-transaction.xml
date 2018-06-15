@@ -33,6 +33,6 @@
     </tx:advice>
 
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.zkh.service.impl.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.nfc.service.impl.*.*(..))"/>
     </aop:config>
 </beans>
